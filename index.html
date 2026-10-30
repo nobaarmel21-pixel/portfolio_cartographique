@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio cartographique | Armel Noba</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bibliothèque Leaflet pour la carte interactive -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+
+    <!-- BARRE LATERALE -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">AN</div>
+            <div>
+                <h1>ARMEL NOBA</h1>
+                <p>Portfolio géospatial</p>
+            </div>
+        </div>
+
+        <div class="sidebar-separator"></div>
+
+        <div class="sidebar-heading">
+            NAVIGATION
+        </div>
+
+        <button class="project active" data-project="accueil">
+            <span>⌂</span>
+            <div>
+                <strong>Accueil</strong>
+                <small>Vue générale</small>
+            </div>
+        </button>
+
+        <button class="project" data-project="apropos">
+            <span>👤</span>
+            <div>
+                <strong>À propos de moi</strong>
+                <small>Mon profil et mon parcours</small>
+            </div>
+        </button>
+
+        <div class="sidebar-separator"></div>
+
+        <div class="sidebar-heading">
+            MES PROJETS
+        </div>
+
+        <button class="project" data-project="gspm">
+            <span>◎</span>
+            <div>
+                <strong>Projet GSPM</strong>
+                <small>Analyse de l'accessibilité</small>
+            </div>
+        </button>
+
+        <button class="project" data-project="occupation">
+            <span>▦</span>
+            <div>
+                <strong>Occupation du sol</strong>
+                <small>Tortiya · Télédétection</small>
+            </div>
+        </button>
+
+<button class="project" data-project="paludisme">
+    <span>🦟</span>
+    <div>
+        <strong>Paludisme à Cocody</strong>
+        <small>Analyse de vulnérabilité</small>
+    </div>
+</button>
+
+        <div class="sidebar-separator"></div>
+
+        <div class="sidebar-heading">
+            OUTILS CARTOGRAPHIQUES
+        </div>
+
+        <div class="tool-info">
+            <span>＋</span>
+            <p>Zoom avant et arrière</p>
+        </div>
+
+        <div class="tool-info">
+            <span>⌖</span>
+            <p>Navigation sur la carte</p>
+        </div>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            <div>
+                <strong>ESPACE CARTOGRAPHIQUE</strong>
+                <small>Portfolio personnel</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main-content">
+
+        <header class="map-heading">
+            <div>
+                <p class="eyebrow">PORTFOLIO GÉOSPATIAL</p>
+
+                <h2 id="map-title">
+                    Bienvenue sur mon portfolio
+                </h2>
+
+                <p id="map-description">
+                    Découvrez mon profil, mes compétences et mes projets
+                    en cartographie et systèmes d'information géographique.
+                </p>
+            </div>
+
+            <span class="map-badge">GÉOMATIQUE & SIG</span>
+        </header>
+
+
+        <!-- PAGE D'ACCUEIL -->
+    
+<section id="accueil-content" class="content-section">
+
+    <div class="hero-section">
+
+        <div class="hero-text">
+
+            <p class="eyebrow">CARTOGRAPHIE · GÉOMATIQUE · SIG</p>
+
+            <h2>
+                La géomatique<br>
+                au service des<br>
+                <span>territoires.</span>
+            </h2>
+
+            <p class="hero-description">
+                Bienvenue dans mon espace professionnel.
+                Je m'intéresse à la cartographie, aux systèmes
+                d'information géographique et à l'analyse spatiale
+                pour mieux comprendre les territoires et accompagner
+                la prise de décision.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-button" data-project="apropos">
+                    Découvrir mon profil →
+                </button>
+
+                <button class="secondary-button" data-project="gspm">
+                    Explorer mes projets
+                </button>
+
+            </div>
+
+            <div class="hero-tags">
+                <span>QGIS</span>
+                <span>ArcGIS Pro</span>
+                <span>Télédétection</span>
+                <span>Analyse spatiale</span>
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="visual-top">
+                <span class="status-dot"></span>
+                <span>ESPACE GÉOSPATIAL</span>
+                <span class="visual-coordinate">05°21'N · 04°01'W</span>
+            </div>
+
+            <div class="visual-map">
+
+                <div class="map-grid"></div>
+
+                <div class="map-circle circle-one"></div>
+                <div class="map-circle circle-two"></div>
+                <div class="map-circle circle-three"></div>
+
+                <div class="map-point point-one"></div>
+                <div class="map-point point-two"></div>
+                <div class="map-point point-three"></div>
+
+                <div class="map-label label-one">ANALYSE SPATIALE</div>
+                <div class="map-label label-two">DONNÉES SIG</div>
+
+                <div class="map-cross">+</div>
+
+            </div>
+
+            <div class="visual-bottom">
+
+                <div>
+                    <small>DOMAINE</small>
+                    <strong>Géomatique</strong>
+                </div>
+
+                <div>
+                    <small>APPROCHE</small>
+                    <strong>Analyse territoriale</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- CARTES DES COMPETENCES -->
+<div class="stats-section">
+
+    <div class="stat-card">
+        <div class="stat-icon">🗺️</div>
+        <h3>Cartographie</h3>
+        <p>Conception, mise en page et production cartographiques.</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">📍</div>
+        <h3>SIG & analyse spatiale</h3>
+        <p>QGIS, ArcGIS Pro et analyse des données géographiques.</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <h3>CartoVision 2026</h3>
+        <p>1er prix au Forum de l’Innovation Géomatique (FIG 2026).</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">📊</div>
+        <h3>Collecte de données</h3>
+        <p>KoboToolbox, ODK et collecte de données sur le terrain.</p>
+    </div>
+
+</div>
+
+<!-- MES PROJETS CARTOGRAPHIQUES -->
+<div class="projects-section">
+
+    <div class="projects-heading">
+        <p class="eyebrow">PORTFOLIO</p>
+        <h2>Mes projets cartographiques</h2>
+        <p>
+            Découvrez quelques travaux réalisés en cartographie,
+            télédétection et analyse spatiale.
+        </p>
+    </div>
+
+    <div class="projects-grid">
+
+        <!-- PROJET GSPM -->
+        <div class="project-card">
+
+            <div class="project-card-icon">🚒</div>
+
+            <span class="project-category">ANALYSE SPATIALE</span>
+
+            <h3>Optimisation de la couverture du GSPM</h3>
+
+            <p>
+                Analyse de l'accessibilité et des temps de réponse
+                des services de secours dans le District Autonome
+                d'Abidjan.
+            </p>
+
+            <button class="project-card-button" data-project="gspm">
+                Découvrir le projet →
+            </button>
+
+        </div>
+
+        <!-- PROJET OCCUPATION DU SOL -->
+        <div class="project-card">
+
+            <div class="project-card-icon">🌍</div>
+
+            <span class="project-category">TÉLÉDÉTECTION</span>
+
+            <h3>Occupation du sol à Tortiya</h3>
+
+            <p>
+                Cartographie des principales classes d'occupation
+                du sol à partir d'images satellitaires et d'une
+                classification non supervisée.
+            </p>
+
+            <button class="project-card-button" data-project="occupation">
+                Découvrir le projet →
+            </button>
+
+        </div>
+
+<!-- PROJET PALUDISME -->
+<div class="project-card">
+
+    <div class="project-card-icon">🦟</div>
+
+    <span class="project-category">SANTÉ · ANALYSE SPATIALE</span>
+
+    <h3>Vulnérabilité au paludisme à Cocody</h3>
+
+    <p>
+        Analyse spatiale de la vulnérabilité des populations
+        autour des gîtes larvaires dans la commune de Cocody.
+    </p>
+
+    <button class="project-card-button" data-project="paludisme">
+        Découvrir le projet →
+    </button>
+
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="map-panel">
+
+        <div class="panel-heading">
+            <h3>Carte interactive</h3>
+            <p>Explorez la zone géographique affichée.</p>
+        </div>
+
+        <div id="map"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PRESENTATION PERSONNELLE -->
+<section id="apropos-content" class="content-section" hidden>
+
+    <div class="profile-card">
+
+        <p class="eyebrow">PRÉSENTATION PERSONNELLE</p>
+
+        <h2>À propos de moi</h2>
+
+        <div class="profile-layout">
+
+            <!-- PHOTO DE PROFIL -->
+            <div class="profile-photo-container">
+                <img
+                    src="images/portrait.jpg.jpeg"
+                    alt="Portrait de Noba Noba Armel"
+                    class="profile-photo"
+                >
+            </div>
+
+            <!-- TEXTE DE PRESENTATION -->
+            <div class="profile-text">
+
+                <h3>Noba Noba Armel</h3>
+
+                <p class="profile-role">
+                    Cartographie · Systèmes d'information géographique · Analyse spatiale
+                </p>
+
+                <p>
+                    Passionné par la cartographie, les systèmes d'information
+                    géographique (SIG) et l'analyse spatiale, je m'intéresse
+                    à l'exploitation des données géographiques pour mieux
+                    comprendre les territoires et accompagner la prise
+                    de décision.
+                </p>
+
+                <p>
+                    Mes compétences portent sur la conception cartographique,
+                    le traitement des données spatiales, la télédétection
+                    et l'analyse de l'occupation du sol. J'utilise notamment
+                    QGIS et ArcGIS Pro pour réaliser des cartes thématiques
+                    et conduire des analyses géographiques.
+                </p>
+
+                <p>
+                    Actuellement en stage à la Direction Générale de
+                    l'Administration du Territoire (DGAT), au sein de la
+                    Direction du Découpage Administratif et de la
+                    Cartographie (DDAC), je contribue aux travaux de
+                    traitement et d'exploitation des données géographiques.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- DISTINCTION CARTOVISION -->
+        <div class="award-card">
+
+            <div class="award-text">
+
+                <p class="eyebrow">DISTINCTION</p>
+
+                <h3>🏆 Premier prix CartoVision — FIG 2026</h3>
+
+                <p>
+                    Lauréat du premier prix de CartoVision lors du Forum
+                    de l'Innovation Géomatique (FIG 2026), grâce à mon projet
+                    portant sur l'optimisation de la couverture spatiale
+                    et des temps de réponse du Groupement des Sapeurs-Pompiers
+                    Militaires (GSPM) dans le District Autonome d'Abidjan.
+                </p>
+
+                <p>
+                    Cette distinction renforce mon intérêt pour l'utilisation
+                    des SIG dans l'analyse spatiale et l'aide à la décision.
+                </p>
+
+            </div>
+
+            <!-- PHOTO DU TROPHEE -->
+            <div class="award-photo-container">
+                <img
+                    src="images/cartovision.jpg.jpeg"
+                    alt="Trophée du premier prix CartoVision au FIG 2026"
+                    class="award-photo"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+<div class="skills-panel">
+    <h3>Mes principaux outils</h3>
+
+    <p class="skills-description">
+        Les outils que j'utilise pour la cartographie,
+        l'analyse spatiale et la collecte de données géographiques.
+    </p>
+
+    <div class="skill-list">
+        <span>🗺️ QGIS</span>
+        <span>🌍 ArcGIS Pro</span>
+        <span>📍 KoboToolbox</span>
+        <span>📋 ODK</span>
+        <span>🌐 Google Earth</span>
+        <span>📊 Microsoft Excel</span>
+        <span>🗄️ PostgreSQL / PostGIS — initiation</span>
+    </div>
+</div>
+
+
+        </section>
+
+
+        <!-- PROJET GSPM -->
+
+<section id="gspm-content" class="content-section" hidden>
+
+    <div class="project-detail">
+
+        <p class="eyebrow">PROJET CARTOGRAPHIQUE · CARTOVISION 2026</p>
+
+        <h2>
+            Optimisation de la couverture spatiale et des temps
+            de réponse du GSPM dans le District Autonome d'Abidjan
+        </h2>
+
+        <div class="project-award">
+            🏆 1er prix — CartoVision 2026
+            <span>Forum de l'Innovation Géomatique (FIG 2026)</span>
+        </div>
+
+        <p> Cette étude porte sur l'analyse de la couverture opérationnelle du 
+            Groupement des Sapeurs-Pompiers Militaires (GSPM) dans le District Autonome 
+            d'Abidjan après l'implantation de nouvelles casernes. La répartition spatiale 
+            des temps de réponse met en évidence une amélioration de l'accessibilité aux secours 
+            dans plusieurs secteurs, notamment autour des nouveaux sites proposés à Abobo, Cocody 
+            et Port-Bouët. Les zones bénéficiant des temps de réponse les plus courts (0 à 10 minutes) 
+            présentent une accessibilité très favorable, tandis que certains secteurs périphériques et 
+            éloignés des casernes restent caractérisés par des temps de réponse élevés, supérieurs à 20 minutes. 
+            La persistance de ces zones de faible accessibilité souligne les disparités spatiales dans la couverture 
+            des secours à l'échelle du District. 
+        </p> <p> 
+            L'implantation des nouvelles casernes constitue une stratégie 
+                d'amélioration de la couverture opérationnelle du GSPM et de réduction des délais d'intervention. 
+                Les secteurs où les temps de réponse demeurent élevés, notamment dans certaines parties d'Abobo, de 
+                Yopougon et de Port-Bouët, nécessitent une attention particulière. Il apparaît ainsi essentiel de prioriser 
+                les investissements dans les infrastructures de secours, d'optimiser la localisation des futures casernes et 
+                de renforcer les moyens opérationnels dans les zones insuffisamment couvertes. Cette démarche contribuerait à 
+                réduire les inégalités spatiales d'accès aux secours et à améliorer la capacité de réponse du GSPM face aux urgences. 
+            </p>
+
+        <h3>Objectif du projet</h3>
+
+        <p>
+            Contribuer à l'amélioration de la couverture spatiale
+            du Groupement des Sapeurs-Pompiers Militaires (GSPM)
+            en identifiant des secteurs prioritaires pour
+            l'implantation de nouveaux sites, à partir de
+            l'analyse des temps d'accès et de la répartition
+            des espaces urbanisés.
+        </p>
+
+        <h3>Méthodologie et outils</h3>
+
+        <p>
+            Le travail repose sur l'exploitation des données
+            géographiques, l'analyse des zones accessibles
+            et la représentation cartographique des temps
+            de réponse. Le logiciel QGIS a été utilisé pour
+            réaliser les traitements et produire les cartes
+            d'analyse spatiale.
+        </p>
+
+        <div class="project-tags">
+            <span>QGIS</span>
+            <span>Analyse spatiale</span>
+            <span>Accessibilité</span>
+            <span>Cartographie thématique</span>
+            <span>Planification territoriale</span>
+        </div>
+
+<div class="project-image-container">
+    <h3>Carte d'analyse du projet GSPM</h3>
+
+   <img src="images/gspm.jpg.png" 
+   alt="Carte d'optimisation de la couverture spatiale du GSPM">
+        class="project-image"
+        style="width: 100%; height: auto; display: block;"
+    >
+</div>
+
+</section>
+
+<!-- PROJET OCCUPATION DU SOL -->
+<section id="occupation-content" class="content-section" hidden>
+
+    <div class="project-detail">
+
+        <p class="eyebrow">TÉLÉDÉTECTION · ANALYSE SPATIALE</p>
+
+        <h2>
+            Cartographie de l'occupation du sol
+            dans la commune de Tortiya
+        </h2>
+
+        <p> Ce projet porte sur l'analyse de l'occupation du sol dans la commune de Tortiya, située dans le nord de la Côte d'Ivoire, 
+            dans la région du Hambol. À partir d'images satellitaires Sentinel-2, une classification non supervisée a été réalisée afin 
+            d'identifier et de représenter les principales classes d'occupation du sol. La carte met en évidence une prédominance des formations 
+            végétales, notamment les savanes herbeuses à végétation clairsemée et les espaces caractérisés par un couvert végétal dense. Les sols 
+            nus et les zones habitées apparaissent de manière plus fragmentée au sein du territoire. La répartition spatiale révèle également des 
+            variations entre les secteurs de la commune, avec une présence importante du couvert végétal dans les parties centrale et méridionale, 
+            tandis que les sols nus et les zones habitées se répartissent en mosaïque, notamment dans les secteurs septentrionaux. Cette organisation 
+            traduit une occupation du sol hétérogène à l'échelle communale. 
+        </p> <p> 
+            Ces résultats constituent un outil d'aide à la décision pour la gestion du territoire communal. Ils peuvent contribuer à orienter les actions 
+            d'aménagement, à identifier les secteurs nécessitant une attention particulière en matière de préservation du couvert végétal et à suivre l'évolution 
+            des espaces bâtis et des sols nus. Une comparaison avec des images satellitaires de différentes dates permettrait de détecter les changements d'occupation 
+            du sol et d'appuyer une planification territoriale plus durable. Une vérification sur le terrain serait toutefois nécessaire pour confirmer la nature des classes 
+            identifiées par la classification non supervisée. 
+        </p>
+
+        <p>
+            À partir d'images satellitaires, une classification
+            non supervisée a été réalisée afin d'identifier
+            et de représenter les principales classes
+            d'occupation du sol sur le territoire étudié.
+        </p>
+
+        <h3>Objectif du projet</h3>
+
+        <p>
+            L'objectif est de produire une représentation
+            cartographique de la répartition spatiale des
+            différentes classes d'occupation du sol, afin
+            de mieux comprendre l'organisation du territoire
+            et les caractéristiques de sa couverture terrestre.
+        </p>
+
+        <h3>Méthodologie</h3>
+
+        <p>
+            Le travail repose sur l'exploitation d'images
+            satellitaires et la réalisation d'une classification
+            non supervisée dans QGIS.
+            Les classes obtenues ont ensuite été représentées
+            sous forme cartographique afin de faciliter
+            leur interprétation spatiale.
+        </p>
+
+        <h3>Résultats et analyse</h3>
+
+        <p>
+            La carte produite permet de visualiser la
+            distribution spatiale des classes identifiées
+            et de mettre en évidence leur répartition
+            au sein de la commune de Tortiya.
+        </p>
+
+        <h3>Compétences mobilisées</h3>
+
+        <div class="project-tags">
+            <span>QGIS</span>
+            <span>Télédétection</span>
+            <span>Classification non supervisée</span>
+            <span>Occupation du sol</span>
+            <span>Analyse spatiale</span>
+            <span>Cartographie thématique</span>
+        </div>
+
+        <div class="project-image">
+            <img src="images/tortiya.png"
+            alt="Carte d'occupation du sol de Tortiya">
+        </div>
+
+    </div>
+
+</section>
+
+        </section>
+
+
+<!-- PROJET PALUDISME -->
+<section id="paludisme-content" class="content-section" hidden>
+
+    <div class="project-detail">
+
+        <p class="eyebrow">SANTÉ · ANALYSE SPATIALE</p>
+
+        <h2>
+            Analyse de la vulnérabilité des populations
+            au paludisme autour des gîtes larvaires
+            dans la commune de Cocody
+        </h2>
+
+        <p> 
+            Ce projet porte sur l'analyse spatiale de la vulnérabilité des populations 
+            au paludisme autour des gîtes larvaires dans la commune de Cocody. La répartition 
+            spatiale des gîtes larvaires et des zones de vulnérabilité met en évidence plusieurs 
+            foyers de forte exposition, notamment dans les secteurs de Djibi, Riviera Palmeraie, 
+            Camp militaire Akouédo, Akouédo Village, Riviera 6 et M'Badon. Les zones les plus exposées 
+            correspondent principalement aux espaces situés à proximité immédiate des gîtes larvaires, 
+            où se concentrent les populations extrêmement et fortement vulnérables. Les secteurs de Djibi 
+            et de Riviera Palmeraie présentent plusieurs foyers de vulnérabilité, tandis que les secteurs 
+            d'Akouédo et de M'Badon se caractérisent également par la présence de zones de vulnérabilité 
+            élevée autour des gîtes identifiés. 
+        </p> <p>
+            Ces résultats soulignent la nécessité de mettre en œuvre des interventions ciblées dans les secteurs 
+            les plus exposés. Il s'agit notamment de renforcer les opérations d'identification et de traitement des 
+            gîtes larvaires, d'intensifier les actions de sensibilisation des populations aux mesures de prévention 
+            du paludisme et de promouvoir l'assainissement des espaces favorables à la prolifération des moustiques. 
+            La priorisation des interventions dans les zones de vulnérabilité extrême et forte, notamment à Djibi, 
+            Riviera Palmeraie et Akouédo, permettrait d'optimiser les ressources disponibles et de contribuer à la réduction 
+            des risques sanitaires liés au paludisme dans la commune de Cocody. 
+        </p>
+
+        <h3>Objectif du projet</h3>
+
+        <p>
+            Identifier les zones où les populations sont potentiellement
+            exposées au risque de paludisme en fonction de la proximité
+            des gîtes larvaires.
+        </p>
+
+        <h3>Résultats cartographiques</h3>
+
+        <p>
+            La carte présente les gîtes larvaires, les populations
+            vulnérables, les zones de vulnérabilité et les limites
+            des quartiers de la commune de Cocody.
+        </p>
+
+        <div class="project-tags">
+            <span>QGIS</span>
+            <span>Analyse spatiale</span>
+            <span>Cartographie thématique</span>
+            <span>Santé publique</span>
+            <span>Gîtes larvaires</span>
+        </div>
+
+        <div class="project-image-container">
+            <h3>Carte de vulnérabilité au paludisme</h3>
+
+            <div class="project-image">
+                <img src="images/paludisme.png"
+                     alt="Carte de vulnérabilité des populations au paludisme autour des gîtes larvaires à Cocody">
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- PIED DE PAGE -->
+        <footer class="main-footer">
+            <p>Portfolio cartographique d'Armel Noba</p>
+            <p>Cartographie · Géomatique · Analyse spatiale</p>
+        </footer>
+
+    </main>
+
+
+    <!-- Bibliothèque Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Script du portfolio -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
